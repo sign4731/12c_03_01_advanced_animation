@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+}
+
+.hidden-opacity {
+  opacity: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+h1,
+h2,
+p {
+  font-family: niveau-grotesk, sans-serif;
+  font-style: normal;
+}
+
+body {
+  background-color: #f5f5f5;
+}
+
+/* scrollpage */
+html {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+
+.scroll_container img {
+  width: 300px;
+}
+
+.bike_img {
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.scroll_container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  scroll-snap-align: center;
+}
+
+.scroll_bike_grips,
+.scroll_bike_wheels,
+.scroll_bike_saddle,
+.scroll_bike_frame,
+.scroll_bike_lights,
+.scroll_bike_darkmode {
+  position: absolute;
+}
+
+.scroll_container .text_wrapper {
+  text-align: center;
+}
+
+#last_scrollpage {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  scroll-snap-align: center;
+}
+
+#last_scrollpage button {
+  width: 200px;
+  height: 40px;
+  font-weight: 400;
+  border: none;
+  background-color: #59e3bd;
+  color: #f5f5f5;
+  font-size: 1.1rem;
+  box-shadow: 1px 3px 5px #00000025;
+  margin-top: 30px;
+}
+
+#dark_overlay {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.596);
+  position: absolute;
+  /* z-index: 100; */
+}
+
+#darkmode .text_wrapper {
+  z-index: 100;
+}
+
+#darkmode .text_wrapper h2 {
+  color: #f5f5f5;
+}
+
+#darkmode .text_wrapper p {
+  color: #f5f5f5;
+}
+
+#darkmode span {
+  text-shadow: 1px 3px 5px #59e3bd;
+}
+
+.scroll_bike_darkmode {
+  z-index: 1000;
+  opacity: 60%;
+}
+
+/* scrollpage font details */
+.text_wrapper h2 {
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-top: -40px;
+  color: black;
+  line-height: 1.4;
+}
+
+.text_wrapper span {
+  font-weight: 900;
+  font-size: 3.5rem;
+  color: #59e3bd;
+  text-shadow: 1px 3px 5px #00000025;
+  line-height: 1.2;
+}
+
+.text_wrapper p {
+  font-weight: 200;
+  font-style: italic;
+  font-size: 1rem;
+  padding-top: 12px;
+}
+
+#last_scrollpage h2 {
+  font-weight: 400;
+  font-size: 1.3rem;
+  margin-top: 40px;
+  color: black;
+  line-height: 1.4;
+}
+
+#last_scrollpage span {
+  font-weight: 900;
+  font-size: 3.2rem;
+  color: #59e3bd;
+  text-shadow: 1px 3px 5px #00000025;
+  margin-bottom: 30px;
+}
+
+/* Media queries */
+@media screen and (min-width: 500px) {
+  .scroll_container img {
+    width: 500px;
+  }
+  .text_wrapper h2 {
+    font-size: 2.3rem;
+  }
+
+  .text_wrapper span {
+    font-size: 4.4rem;
+  }
+
+  .text_wrapper p {
+    font-size: 1.2rem;
+  }
+
+  #last_scrollpage h2 {
+    font-size: 2.3rem;
+    /* margin-top: -40px; */
+  }
+
+  #last_scrollpage span {
+    font-size: 4.4rem;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .scroll_container {
+    flex-direction: row;
+    margin-right: 50px;
+    justify-content: center;
+  }
+  .scroll_container img {
+    width: 100%;
+  }
+  .bike_img {
+    width: 50%;
+    align-self: center;
+    margin-left: 100px;
+    margin-bottom: 0;
+  }
+
+  .text_wrapper {
+    align-self: center;
+    width: 50%;
+  }
+
+  .text_wrapper h2 {
+    font-size: 3rem;
+    margin-top: 0;
+  }
+
+  .text_wrapper span {
+    font-size: 5.2rem;
+  }
+
+  .text_wrapper p {
+    font-size: 1.7rem;
+  }
+
+  #last_scrollpage h2 {
+    font-size: 3rem;
+  }
+
+  #last_scrollpage span {
+    font-size: 5.2rem;
+  }
+}
