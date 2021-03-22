@@ -1,0 +1,308 @@
+/**************************** Generel */
+* {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+body {
+  background-color: #f5f5f5;
+}
+.hide {
+  display: none;
+}
+
+#shadow_image {
+  pointer-events: none;
+}
+
+/************************** Product view ****/
+#product_view {
+  width: 100vw;
+  height: 50vh;
+  margin-top: 50px;
+  position: relative;
+}
+
+#product_view img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+}
+
+#product_view #svg {
+  position: relative;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+}
+
+/****************************** Options *********/
+
+#frame_color,
+#metal_color,
+#select_saddle,
+#select_wheels,
+#select_grips {
+  display: flex;
+  margin-bottom: 25px;
+  background-size: 20% 2px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16));
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+}
+
+#select_addons {
+  display: flex;
+  margin-bottom: 25px;
+}
+#options {
+  margin-left: 35px;
+  /* padding: 20px 0; */
+}
+.color {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 20px 10px 40px 0;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+}
+.frame_color1 {
+  background-color: #000000;
+}
+.frame_color2 {
+  background-color: #a70606;
+}
+.frame_color3 {
+  background-color: #e3d6bd;
+}
+.frame_color4 {
+  background-color: #9ec9e0;
+}
+.frame_color5 {
+  background-color: #265828;
+}
+.frame_color6 {
+  background-color: #ffffff;
+}
+
+.metal_color1 {
+  background-color: #505050;
+}
+.metal_color2 {
+  background-color: #d3d3d3;
+}
+.metal_color3 {
+  background-color: #ffce71;
+}
+.metal_color4 {
+  background-color: #c47628;
+}
+.metal_color5 {
+  background-color: #ffffff;
+}
+
+#select_saddle div,
+#select_wheels div,
+#select_addons div,
+#select_grips div {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin: 20px 10px 40px 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+}
+
+.saddle1 {
+  background-image: url(img/normal_saddle_icon.png);
+}
+.saddle2 {
+  background-image: url(img/brown_saddle_icon.png);
+}
+.saddle3 {
+  background-image: url(img/white_saddle_icon.png);
+}
+
+.wheels1 {
+  background-image: url(img/normal_wheels_icon.png);
+}
+.wheels2 {
+  background-image: url(img/sport-wheels-icon.png);
+}
+.wheels3 {
+  background-image: url(img/white_wheels_icon.png);
+}
+
+.grips1 {
+  background-image: url(img/sport-grip-icon.png);
+}
+.grips2 {
+  background-image: url(img/brown_grip_icon.png);
+}
+.grips3 {
+  background-image: url(img/normal_grip_icon.png);
+}
+
+.addons1 {
+  background-image: url(img/basket_icon.png);
+}
+.addons2 {
+  background-image: url(img/computer-icon.png);
+}
+.addons3 {
+  background-image: url(img/lights-icon.png);
+}
+
+/************************************* Selected features**************/
+
+#selected_features {
+  width: 100vw;
+  height: 200px;
+  box-shadow: 0px 3px 18px rgb(0 0 0 / 30%);
+  background-color: #f5f5f5;
+  padding: 40px 10px;
+}
+
+#selected_gear {
+  height: 50%;
+}
+#selected_addons {
+  height: 50%;
+}
+
+/********************************* Mouse over message ****************/
+
+.hover_text {
+  opacity: 0;
+}
+.hover_text_gear {
+  opacity: 0;
+}
+
+/************************ Media Q's****************/
+
+@media (min-width: 750px) {
+  #configurator_main {
+    display: flex;
+  }
+
+  /************************ Product view 750px *************/
+  #product_view {
+    order: 2;
+    margin-top: 100px;
+  }
+
+  /*********************** Options 750px *******/
+
+  #options {
+    order: 1;
+    margin-top: 100px;
+  }
+
+  #select_saddle div,
+  #select_wheels div,
+  #select_addons div,
+  #select_grips div {
+    width: 60px;
+    height: 60px;
+  }
+
+  .color {
+    width: 25px;
+    height: 25px;
+    margin: 20px 5px 30px 0;
+  }
+
+  #select_saddle div,
+  #select_wheels div,
+  #select_addons div,
+  #select_grips div {
+    margin: 20px 10px 30px 0;
+  }
+
+  #frame_color,
+  #metal_color,
+  #select_saddle,
+  #select_wheels,
+  #select_grips {
+    display: flex;
+    margin-bottom: 25px;
+    background-size: 30% 2px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16));
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+  }
+
+  /*********************** Selected features 750px *******/
+
+  #selected_features {
+    order: 3;
+    max-width: 200px;
+    box-shadow: none;
+    background-size: 2px 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16));
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    align-self: center;
+    padding: 20px;
+  }
+
+  /********************************* Mouse over message 750px ****************/
+
+  .hover_text {
+    width: 110px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    margin: 35px -43px;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .hover_text_gear {
+    width: 110px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    margin: 70px -25px;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .color:hover .hover_text,
+  #select_saddle div:hover .hover_text_gear,
+  #select_wheels div:hover .hover_text_gear,
+  #select_grips div:hover .hover_text_gear,
+  #select_addons div:hover .hover_text_gear {
+    opacity: 1;
+  }
+
+  .hover_text::after,
+  .hover_text_gear::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+  }
+}

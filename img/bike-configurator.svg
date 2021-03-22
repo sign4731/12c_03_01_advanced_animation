@@ -18,6 +18,6 @@
     <path d="M463,402c.11,3.48,1,5.12.5,8-5.93,3.76-13.72,3.06-23.5,3a22.36,22.36,0,0,0-2-3c.34-2,3.35-10.4,4.5-11H448C451,401.07,458.94,401.69,463,402Z" transform="translate(-7 -7)" fill="none" fill-rule="evenodd"/>
   </g>
   <g id="shadow_image">
-    <image id="shadow_Image-2" data-name="shadow Image" width="2067" height="1213" transform="scale(0.5)" xlink:href="bike-configurator1.png"/>
+    <image id="shadow_Image-2" data-name="shadow Image" width="2067" height="1213" transform="scale(0.5)" xlink:href="img/bike-configurator1.png"/>
   </g>
 </svg>
