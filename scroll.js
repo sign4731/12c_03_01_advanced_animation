@@ -30,7 +30,7 @@ function setupScrollAnimations() {
     scrollTrigger: {
       trigger: ".scroll_container_frame",
       scrub: true,
-      markers: true,
+      markers: false,
       start: "bottom 100%",
       end: "bottom 0%",
     },
