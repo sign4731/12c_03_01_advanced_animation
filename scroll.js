@@ -7,6 +7,7 @@ const fadingTextProperties = {
   iterations: 1,
   easing: "ease-out",
   fill: "forwards",
+  delay: 500,
 };
 
 const fadingTextAnimation = [
@@ -29,11 +30,11 @@ function setupScrollAnimations() {
     scrollTrigger: {
       trigger: ".scroll_container_frame",
       scrub: true,
-      markers: false,
+      markers: true,
       start: "bottom 100%",
       end: "bottom 0%",
     },
-    onComplete: function () {
+    onStart: () => {
       const elementToAnimate = document.querySelector(".text_wrapper_2");
       if (!elementToAnimate.classList.contains("animation_done")) {
         elementToAnimate.animate(fadingTextAnimation, fadingTextProperties);
@@ -51,7 +52,7 @@ function setupScrollAnimations() {
       start: "bottom 100%",
       end: "bottom 0%",
     },
-    onComplete: function () {
+    onStart: () => {
       const elementToAnimate = document.querySelector(".text_wrapper_3");
       if (!elementToAnimate.classList.contains("animation_done")) {
         elementToAnimate.animate(fadingTextAnimation, fadingTextProperties);
@@ -70,7 +71,7 @@ function setupScrollAnimations() {
       start: "bottom 100%",
       end: "bottom 0%",
     },
-    onComplete: function () {
+    onStart: () => {
       const elementToAnimate = document.querySelector(".text_wrapper_4");
       if (!elementToAnimate.classList.contains("animation_done")) {
         elementToAnimate.animate(fadingTextAnimation, fadingTextProperties);
@@ -90,7 +91,7 @@ function setupScrollAnimations() {
       start: "bottom 100%",
       end: "bottom 0%",
     },
-    onComplete: function () {
+    onStart: () => {
       const elementToAnimate = document.querySelector(".text_wrapper_5");
       if (!elementToAnimate.classList.contains("animation_done")) {
         elementToAnimate.animate(fadingTextAnimation, fadingTextProperties);
@@ -123,8 +124,7 @@ function setupScrollAnimations() {
       start: "top 100%",
       end: "top 0%",
     },
-    onComplete: function () {
-      console.log("works");
+    onStart: () => {
       const elementToAnimate = document.querySelector("#last_scrollpage > h2");
       if (!elementToAnimate.classList.contains("animation_done")) {
         elementToAnimate.animate(fadingTextAnimation, fadingTextProperties);
