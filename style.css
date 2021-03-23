@@ -27,6 +27,10 @@ html {
   scroll-snap-type: y mandatory;
 }
 
+.animation_done {
+  display: block;
+}
+
 .scroll_container img {
   width: 300px;
 }
@@ -60,6 +64,14 @@ html {
   text-align: center;
 }
 
+body > main > section:nth-child(1) > div.bike_img > img.scroll_bike_frame.\.scroll_bike_frame1 {
+  z-index: 1;
+}
+
+#last_scrollpage > h2 {
+  opacity: 0;
+}
+
 #last_scrollpage {
   height: 100vh;
   width: 100vw;
@@ -88,9 +100,10 @@ html {
 #dark_overlay {
   height: 100vh;
   width: 100vw;
-  background-color: rgba(0, 0, 0, 0.596);
+  background-color: rgba(0, 0, 0, 0.671);
   position: absolute;
-  /* z-index: 100; */
+  opacity: 0;
+  z-index: 100;
 }
 
 #darkmode .text_wrapper {
@@ -246,3 +259,5 @@ html {
   font-style: italic;
   padding-bottom: 30px;
 }
+
+/* animation  */
