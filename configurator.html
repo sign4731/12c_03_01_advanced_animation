@@ -4,113 +4,113 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="config_style.css" />
     <title>Bike Configurator</title>
   </head>
   <body>
     <main id="configurator_main">
       <div id="product_view">
-        <img src="img/normal_wheels_configurator.png" alt="normal wheels" class="" data-feature="normlal_wheels" />
-        <img src="img/sport-wheels-configurator.png" alt="sport wheels" class="hide" data-feature="sport_wheels" />
-        <img src="img/white_wheels_configurator.png" alt="white wheels" class="hide" data-feature="white_wheels" />
+        <img src="img/normal_wheels_configurator.png" alt="normal wheels" class="hide display_feature" data-feature="racer_wheels" data-sort="wheels" />
+        <img src="img/sport-wheels-configurator.png" alt="sport wheels" class="hide display_feature" data-feature="terrain_wheels" data-sort="wheels" />
+        <img src="img/white_wheels_configurator.png" alt="white wheels" class="hide display_feature" data-feature="white_wheels" data-sort="wheels" />
         <!-- <img src="img/bike-configurator1.png" alt="bike" class="" data-feature="" /> -->
         <div id="svg"></div>
-        <img src="img/basket_configurator.png" alt="basket" class="hide" data-feature="basket" />
-        <img src="img/brown_grip_configurator.png" alt="brown grip" class="hide" data-feature="brown_grip" />
-        <img src="img/brown_saddle_configurator.png" alt="brown saddle" class="hide" data-feature="brown_saddle" />
-        <img src="img/computer-configurator.png" alt="computer" class="hide" data-feature="computer" />
-        <img src="img/lights-configurator.png" alt="lights" class="hide" data-feature="lights" />
-        <img src="img/normal_grip_configurator.png" alt="normal grip" class="" data-feature="normal_grip" />
-        <img src="img/normal_saddle_configurator.png" alt="normal saddle" class="" data-feature="normal_saddle" />
-        <img src="img/sport-grip-configurator.png" alt="sport grip" class="hide" data-feature="sport_grip" />
-        <img src="img/white_saddle_configurator.png" alt="white saddle" class="hide" data-feature="white_saddle" />
+        <img src="img/basket_configurator.png" alt="basket" class="hide display_feature" data-feature="basket" data-sort="add_ons" />
+        <img src="img/brown_grip_configurator.png" alt="brown grip" class="hide display_feature" data-feature="brown_grip" data-sort="grips" />
+        <img src="img/brown_saddle_configurator.png" alt="brown saddle" class="hide display_feature" data-feature="brown_saddle" data-sort="saddle" />
+        <img src="img/computer-configurator.png" alt="computer" class="hide display_feature" data-feature="computer" data-sort="add_ons" />
+        <img src="img/lights-configurator.png" alt="lights" class="hide display_feature" data-feature="lights" data-sort="add_ons" />
+        <img src="img/normal_grip_configurator.png" alt="normal grip" class="hide display_feature" data-feature="normal_grip" data-sort="grips" />
+        <img src="img/normal_saddle_configurator.png" alt="normal saddle" class="hide display_feature" data-feature="normal_saddle" data-sort="saddle" />
+        <img src="img/sport-grip-configurator.png" alt="sport grip" class="hide display_feature" data-feature="sport_grip" data-sort="grips" />
+        <img src="img/white_saddle_configurator.png" alt="white saddle" class="hide display_feature" data-feature="white_saddle" data-sort="saddle" />
       </div>
       <div id="options">
         <p>Select bike frame color</p>
         <div id="frame_color">
-          <div class="color frame_color1">
-            <span class="hover_text">Midnight black</span>
+          <div class="color frame_color1" data-color="#000000">
+            <span class="hover_text"> <p>Midnight black</p> </span>
           </div>
-          <div class="color frame_color2">
-            <span class="hover_text">Wine red</span>
+          <div class="color frame_color2" data-color="#a70606">
+            <span class="hover_text"> <p>Wine red</p> </span>
           </div>
-          <div class="color frame_color3">
-            <span class="hover_text">Beachy sand</span>
+          <div class="color frame_color3" data-color="#e3d6bd">
+            <span class="hover_text"> <p>Beachy sand</p> </span>
           </div>
-          <div class="color frame_color4">
-            <span class="hover_text">Sky blue</span>
+          <div class="color frame_color4" data-color="#9ec9e0">
+            <span class="hover_text"> <p>Sky blue</p> </span>
           </div>
-          <div class="color frame_color5">
-            <span class="hover_text">Army green</span>
+          <div class="color frame_color5" data-color="#265828">
+            <span class="hover_text"> <p>Army green</p> </span>
           </div>
-          <div class="color frame_color6">
-            <span class="hover_text">Pearl white</span>
+          <div class="color frame_color6" data-color="#ffffff">
+            <span class="hover_text"> <p>Pearl white</p> </span>
           </div>
         </div>
         <p>Select color of metal</p>
         <div id="metal_color">
-          <div class="color metal_color1">
-            <span class="hover_text">Moon grey</span>
+          <div class="color metal_color1" data-color="#505050">
+            <span class="hover_text"> <p>Moon grey</p> </span>
           </div>
-          <div class="color metal_color2">
-            <span class="hover_text">Silver</span>
+          <div class="color metal_color2" data-color="#d3d3d3">
+            <span class="hover_text"> <p>Silver</p> </span>
           </div>
-          <div class="color metal_color3">
-            <span class="hover_text">Winners gold</span>
+          <div class="color metal_color3" data-color="#ffce71">
+            <span class="hover_text"> <p>Winners gold</p> </span>
           </div>
-          <div class="color metal_color4">
-            <span class="hover_text">Bronze</span>
+          <div class="color metal_color4" data-color="#c47628">
+            <span class="hover_text"> <p>Bronze</p> </span>
           </div>
-          <div class="color metal_color5">
-            <span class="hover_text">Pearl white</span>
+          <div class="color metal_color5" data-color="#ffffff">
+            <span class="hover_text"> <p>Pearl white</p> </span>
           </div>
         </div>
         <p>Select saddle</p>
         <div id="select_saddle">
-          <div class="saddle1">
-            <span class="hover_text_gear">Racer saddle</span>
+          <div class="saddle1 feature" data-feature="normal_saddle" data-sort="saddle">
+            <span class="hover_text_gear"> <p>Racer saddle</p> </span>
           </div>
-          <div class="saddle2">
-            <span class="hover_text_gear">Brown saddle</span>
+          <div class="saddle2 feature" data-feature="brown_saddle" data-sort="saddle">
+            <span class="hover_text_gear"> <p>Brown saddle</p> </span>
           </div>
-          <div class="saddle3">
-            <span class="hover_text_gear">White saddle</span>
+          <div class="saddle3 feature" data-feature="white_saddle" data-sort="saddle">
+            <span class="hover_text_gear"> <p>White saddle</p> </span>
           </div>
         </div>
         <p>Select wheels</p>
         <div id="select_wheels">
-          <div class="wheels1">
-            <span class="hover_text_gear">Racer wheels</span>
+          <div class="wheels1 feature" data-feature="racer_wheels" data-sort="wheels">
+            <span class="hover_text_gear"> <p>Racer wheels</p> </span>
           </div>
-          <div class="wheels2">
-            <span class="hover_text_gear">Terrain wheels</span>
+          <div class="wheels2 feature" data-feature="terrain_wheels" data-sort="wheels">
+            <span class="hover_text_gear"> <p>Terrain wheels</p> </span>
           </div>
-          <div class="wheels3">
-            <span class="hover_text_gear">White wheels</span>
+          <div class="wheels3 feature" data-feature="white_wheels" data-sort="wheels">
+            <span class="hover_text_gear"> <p>White wheels</p> </span>
           </div>
         </div>
         <p>Select grips</p>
         <div id="select_grips">
-          <div class="grips1">
-            <span class="hover_text_gear">Racer grips</span>
+          <div class="grips1 feature" data-feature="sport_grip" data-sort="grips">
+            <span class="hover_text_gear"> <p>Racer grips</p> </span>
           </div>
-          <div class="grips2">
-            <span class="hover_text_gear">Brown grips</span>
+          <div class="grips2 feature" data-feature="brown_grip" data-sort="grips">
+            <span class="hover_text_gear"> <p>Brown grips</p> </span>
           </div>
-          <div class="grips3">
-            <span class="hover_text_gear">Standard grips</span>
+          <div class="grips3 feature" data-feature="normal_grip" data-sort="grips">
+            <span class="hover_text_gear"> <p>Standard grips</p> </span>
           </div>
         </div>
         <p>Select add ons</p>
         <div id="select_addons">
-          <div class="addons1">
-            <span class="hover_text_gear">Basket</span>
+          <div class="addons1" data-feature="basket" data-sort="add_on">
+            <span class="hover_text_gear"> <p>Basket</p> </span>
           </div>
-          <div class="addons2">
-            <span class="hover_text_gear">Computer</span>
+          <div class="addons2" data-feature="computer" data-sort="add_on">
+            <span class="hover_text_gear"> <p>Computer</p> </span>
           </div>
-          <div class="addons3">
-            <span class="hover_text_gear">Lights</span>
+          <div class="addons3" data-feature="lights" data-sort="add_on">
+            <span class="hover_text_gear"> <p>Lights</p> </span>
           </div>
         </div>
       </div>
@@ -120,18 +120,11 @@
           <ul></ul>
         </div>
         <p>Selected add ons</p>
-        <div class="selected_addons">
+        <div id="selected_addons">
           <ul></ul>
         </div>
       </div>
     </main>
-    <script>
-      window.addEventListener("DOMContentLoaded", loadSVG);
-      async function loadSVG() {
-        let response = await fetch("img/bike-configurator.svg");
-        let mySVG = await response.text();
-        document.querySelector("#product_view #svg").innerHTML = mySVG;
-      }
-    </script>
+    <script src="configurator.js"></script>
   </body>
 </html>

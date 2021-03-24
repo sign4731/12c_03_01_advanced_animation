@@ -13,8 +13,9 @@ body {
   display: none;
 }
 
-#shadow_image {
-  pointer-events: none;
+p {
+  font-family: niveau-grotesk, sans-serif;
+  font-style: normal;
 }
 
 /************************** Product view ****/
@@ -41,6 +42,10 @@ body {
   left: 0;
 }
 
+.interact_with {
+  fill: transparent;
+}
+
 /****************************** Options *********/
 
 #frame_color,
@@ -61,7 +66,7 @@ body {
   margin-bottom: 25px;
 }
 #options {
-  margin-left: 35px;
+  margin-left: 45px;
   /* padding: 20px 0; */
 }
 .color {
@@ -133,17 +138,17 @@ body {
 }
 
 .wheels1 {
-  background-image: url(img/normal_wheels_icon.png);
+  background-image: url(img/racer_wheels_icon.png);
 }
 .wheels2 {
-  background-image: url(img/sport-wheels-icon.png);
+  background-image: url(img/terrain_wheels_icon.png);
 }
 .wheels3 {
   background-image: url(img/white_wheels_icon.png);
 }
 
 .grips1 {
-  background-image: url(img/sport-grip-icon.png);
+  background-image: url(img/sport_grip_icon.png);
 }
 .grips2 {
   background-image: url(img/brown_grip_icon.png);
@@ -156,35 +161,56 @@ body {
   background-image: url(img/basket_icon.png);
 }
 .addons2 {
-  background-image: url(img/computer-icon.png);
+  background-image: url(img/computer_icon.png);
 }
 .addons3 {
-  background-image: url(img/lights-icon.png);
+  background-image: url(img/lights_icon.png);
 }
 
 /************************************* Selected features**************/
 
 #selected_features {
   width: 100vw;
-  height: 200px;
+  height: 400px;
   box-shadow: 0px 3px 18px rgb(0 0 0 / 30%);
   background-color: #f5f5f5;
-  padding: 40px 10px;
+  padding: 40px 40px;
 }
 
-#selected_gear {
-  height: 50%;
-}
+#selected_gear,
 #selected_addons {
-  height: 50%;
+  min-height: 50%;
+}
+
+#selected_gear ul,
+#selected_addons ul {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  padding-inline-start: 0px;
+  display: flex;
+}
+
+#selected_gear ul li,
+#selected_addons ul li {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin: 20px 10px 40px 0;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  list-style-type: none;
+  display: flex;
+}
+
+#selected_gear ul li img,
+#selected_addons ul li img {
+  width: 100%;
+  align-self: center;
 }
 
 /********************************* Mouse over message ****************/
 
-.hover_text {
-  opacity: 0;
-}
-.hover_text_gear {
+.hover_text p,
+.hover_text_gear p {
   opacity: 0;
 }
 
@@ -256,6 +282,17 @@ body {
     padding: 20px;
   }
 
+  #selected_gear ul li,
+  #selected_addons ul li {
+    width: 60px;
+    height: 60px;
+  }
+
+  #selected_gear ul,
+  #selected_addons ul {
+    flex-wrap: wrap;
+  }
+
   /********************************* Mouse over message 750px ****************/
 
   .hover_text {
@@ -270,6 +307,11 @@ body {
     margin: 35px -43px;
     opacity: 0;
     transition: opacity 0.2s;
+  }
+
+  .hover_text p,
+  .hover_text_gear p {
+    opacity: 1;
   }
 
   .hover_text_gear {
@@ -304,5 +346,37 @@ body {
     border-width: 5px;
     border-style: solid;
     border-color: transparent transparent black transparent;
+  }
+}
+
+/***************** Animations ********************/
+
+.animate-feature-in {
+  --diffY: 0;
+  --diffX: 0;
+  animation: feature-in 1s;
+}
+
+@keyframes feature-in {
+  0% {
+    transform: translate(calc(var(--diffX) * 1px), calc(var(--diffY) * 1px));
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.animate-feature-out {
+  --diffY: 0;
+  --diffX: 0;
+  animation: feature-out 1s;
+}
+
+@keyframes feature-out {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(calc(var(--diffX) * 1px), calc(var(--diffY) * 1px));
   }
 }
