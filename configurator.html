@@ -4,10 +4,19 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="config_style.css" />
+    <link rel="stylesheet" href="style.css" />
     <title>Bike Configurator</title>
   </head>
-  <body>
+  <body style="overflow-x: hidden">
+    <nav>
+      <div class="menu_bar_line" style="position: relative">
+        <a href="scroll.html" class="scroll_link">Scroll page</a>
+        <div class="menu_bar_circle"></div>
+        <div class="menu_bar_box"></div>
+        <a href="index.html" class="menu_logo"></a>
+        <a href="configurator.html" class="config_link" style="border-bottom: 2px solid #59e3bd">Configurator</a>
+      </div>
+    </nav>
     <main id="configurator_main">
       <div id="product_view">
         <img src="img/normal_wheels_configurator.png" alt="normal wheels" class="hide display_feature" data-feature="racer_wheels" data-sort="wheels" />
@@ -126,5 +135,7 @@
       </div>
     </main>
     <script src="configurator.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="nav_animation.js"></script>
   </body>
 </html>

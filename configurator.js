@@ -89,8 +89,8 @@ function displayFeatures(event) {
       forbiddenFeature.sport_grip = true;
       console.log("sport grips is true");
     }
-    forbiddenFeature.sport_grip = false;
-    console.log("sport grips is false");
+    // forbiddenFeature.sport_grip = false;
+    // console.log("sport grips is false");
     features[sort] = true;
     console.log(`${feature} is chosen`);
     document.querySelector(`[data-feature=${feature}]`).classList.remove("hide");
@@ -183,6 +183,7 @@ function removeComputer() {
   console.log("remove computer");
   addOns.computer = false;
   forbiddenFeature.sport_grip = false;
+  console.log("sport grip is false");
   document.querySelector(`#product_view [data-feature=computer]`).classList.add("hide");
   console.log("computer is removed");
   const start = document.querySelector(`#select_addons [data-feature=computer]`).getBoundingClientRect();

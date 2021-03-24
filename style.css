@@ -1,3 +1,4 @@
+/**************************** Generel */
 * {
   margin: 0;
 }
@@ -9,19 +10,173 @@
 .hidden {
   display: none;
 }
+.hide {
+  display: none;
+}
 
 h1,
 h2,
-p {
+p,
+a {
   font-family: niveau-grotesk, sans-serif;
   font-style: normal;
 }
 
 body {
   background-color: #f5f5f5;
+  /* overflow-x: hidden; */
 }
 
-/* scrollpage */
+/* nav */
+
+nav {
+  transform: translateY(-100px);
+}
+.menu_bar_line {
+  width: 100vw;
+  height: 50px;
+  background-color: #f5f5f5;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.menu_bar_circle {
+  width: 70px;
+  height: 70px;
+  background-color: #f5f5f5;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  position: absolute;
+  border-radius: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.menu_bar_box {
+  width: 80px;
+  height: 50px;
+  background-color: #f5f5f5;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.menu_logo {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  border-radius: 50%;
+  left: 50%;
+  top: 20%;
+  transform: translate(-50%);
+  background-image: url(img/logo.svg);
+  cursor: pointer;
+}
+
+.scroll_link,
+.config_link {
+  position: absolute;
+  text-decoration: none;
+  top: 35%;
+  transform: translate(-50%);
+  color: black;
+}
+.scroll_link:visited,
+.config_link:visited {
+  color: black;
+}
+.scroll_link {
+  left: 25%;
+}
+
+.config_link {
+  left: 75%;
+}
+
+/*************************************** Frontpage */
+
+#frontpage_type {
+  display: flex;
+  flex-direction: column;
+  /* height: 100vh; */
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  cursor: pointer;
+}
+
+#frontpage_type h1 {
+  font-size: 4rem;
+  padding-bottom: 15px;
+  opacity: 0;
+}
+
+#frontpage_type p {
+  font-size: 1.2rem;
+  font-weight: 200;
+  font-style: italic;
+  padding-bottom: 30px;
+  opacity: 0;
+}
+
+#frontpage_wheel1,
+#frontpage_wheel2 {
+  width: 100vw;
+  height: 250px;
+  position: relative;
+}
+
+#frontpage_wheel1 div {
+  background-image: url(img/logo.svg);
+  background-repeat: no-repeat;
+  background-size: 60%;
+  width: 100%;
+  height: 76vh;
+  opacity: 0.4;
+  transform: translateX(250px) skewY(20deg);
+  position: absolute;
+  top: -14%;
+  left: 55%;
+  transform-origin: center;
+}
+
+#frontpage_wheel2 div {
+  background-image: url(img/logo.svg);
+  background-repeat: no-repeat;
+  background-size: 60%;
+  width: 100%;
+  height: 76vh;
+  height: 76vh;
+  opacity: 0.4;
+  transform: translateY(250px) skew(-54deg, 32deg);
+  position: absolute;
+  top: 43%;
+  left: 20%;
+}
+
+/* .frontpage_wheel_1,
+.frontpage_wheel_2 {
+  display: none;
+}
+
+.frontpage_mobile_wheel_1 {
+  position: absolute;
+  background-image: url(frontpage_wheel_1_mobile.svg);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+} */
+
+#frontpage_logo {
+  background-image: url(img/logo.svg);
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 2%;
+  left: 5%;
+}
+/********************************************** scrollpage */
 html {
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
@@ -166,8 +321,208 @@ body > main > section:nth-child(1) > div.bike_img > img.scroll_bike_frame.\.scro
   text-shadow: 1px 3px 5px #00000025;
   margin-bottom: 30px;
 }
+/************************ Configurator *************************/
 
-/* Media queries */
+/* Product view */
+#configurator_main {
+  margin-top: 50px;
+}
+
+#product_view {
+  width: 100vw;
+  height: 60vh;
+  position: relative;
+}
+
+#product_view img {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+}
+
+#product_view #svg {
+  position: relative;
+  width: 100%;
+  height: auto;
+  top: 0;
+  left: 0;
+}
+
+.interact_with {
+  fill: transparent;
+}
+
+/* Options */
+
+#frame_color,
+#metal_color,
+#select_saddle,
+#select_wheels,
+#select_grips {
+  display: flex;
+  margin-bottom: 25px;
+  background-size: 20% 2px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16));
+  background-repeat: no-repeat;
+  background-position: 0% 100%;
+}
+
+#select_addons {
+  display: flex;
+  margin-bottom: 25px;
+}
+#options {
+  margin-left: 45px;
+  /* padding: 20px 0; */
+}
+.color {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 20px 10px 40px 0;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+}
+.frame_color1 {
+  background-color: #000000;
+}
+.frame_color2 {
+  background-color: #a70606;
+}
+.frame_color3 {
+  background-color: #e3d6bd;
+}
+.frame_color4 {
+  background-color: #9ec9e0;
+}
+.frame_color5 {
+  background-color: #265828;
+}
+.frame_color6 {
+  background-color: #ffffff;
+}
+
+.metal_color1 {
+  background-color: #505050;
+}
+.metal_color2 {
+  background-color: #d3d3d3;
+}
+.metal_color3 {
+  background-color: #ffce71;
+}
+.metal_color4 {
+  background-color: #c47628;
+}
+.metal_color5 {
+  background-color: #ffffff;
+}
+
+#select_saddle div,
+#select_wheels div,
+#select_addons div,
+#select_grips div {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin: 20px 10px 40px 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  cursor: pointer;
+}
+
+.saddle1 {
+  background-image: url(img/normal_saddle_icon.png);
+}
+.saddle2 {
+  background-image: url(img/brown_saddle_icon.png);
+}
+.saddle3 {
+  background-image: url(img/white_saddle_icon.png);
+}
+
+.wheels1 {
+  background-image: url(img/racer_wheels_icon.png);
+}
+.wheels2 {
+  background-image: url(img/terrain_wheels_icon.png);
+}
+.wheels3 {
+  background-image: url(img/white_wheels_icon.png);
+}
+
+.grips1 {
+  background-image: url(img/sport_grip_icon.png);
+}
+.grips2 {
+  background-image: url(img/brown_grip_icon.png);
+}
+.grips3 {
+  background-image: url(img/normal_grip_icon.png);
+}
+
+.addons1 {
+  background-image: url(img/basket_icon.png);
+}
+.addons2 {
+  background-image: url(img/computer_icon.png);
+}
+.addons3 {
+  background-image: url(img/lights_icon.png);
+}
+
+/* Selected features */
+
+#selected_features {
+  max-width: 100vw;
+  height: 400px;
+  box-shadow: 0px 3px 18px rgb(0 0 0 / 30%);
+  background-color: #f5f5f5;
+  padding: 40px 0px 40px 40px;
+}
+
+#selected_gear,
+#selected_addons {
+  min-height: 50%;
+}
+
+#selected_gear ul,
+#selected_addons ul {
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  padding-inline-start: 0px;
+  display: flex;
+}
+
+#selected_gear ul li,
+#selected_addons ul li {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  margin: 20px 10px 40px 0;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+  list-style-type: none;
+  display: flex;
+}
+
+#selected_gear ul li img,
+#selected_addons ul li img {
+  width: 100%;
+  align-self: center;
+}
+
+/* Mouse over message */
+
+.hover_text p,
+.hover_text_gear p {
+  opacity: 0;
+}
+
+/********************************************* Media queries */
 @media screen and (min-width: 500px) {
   .scroll_container img {
     width: 500px;
@@ -194,7 +549,211 @@ body > main > section:nth-child(1) > div.bike_img > img.scroll_bike_frame.\.scro
   }
 }
 
+@media (min-width: 600px) {
+  #frontpage_main {
+    display: grid;
+    grid-template-columns: 10vw 45vw 45vw;
+    grid-template-rows: 40vh 50vh 10vh;
+  }
+  #frontpage_type {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: block;
+    width: 100%;
+  }
+  #frontpage_wheel1 {
+    grid-column: 3/4;
+    grid-row: 1/4;
+    width: 100%;
+    height: 100%;
+  }
+
+  #frontpage_wheel1 div {
+    /* background-image: url(frontpage_wheel_1.svg); */
+    /* background-size: 80%; */
+    background-size: 70%;
+    width: 100vw;
+    height: 100vw;
+    /* transform: rotateX(56deg) rotateY(-32deg) rotateZ(-26deg); */
+    /* top: -700px; */
+    /* left: -20%; */
+    left: -37%;
+    top: -400px;
+    transform: translateX(800px) skewY(20deg);
+  }
+
+  #frontpage_wheel2 {
+    grid-column: 1/3;
+    grid-row: 3/4;
+    width: 100%;
+    height: 100%;
+  }
+
+  #frontpage_wheel2 div {
+    transform: translateY(150px) rotateX(68deg) rotateY(21deg) rotateZ(-40deg);
+    background-size: 80%;
+    top: -300%;
+    left: -41%;
+  }
+
+  #frontpage_logo {
+    top: 5%;
+    left: 3%;
+  }
+
+  #frontpage_type h1 {
+    font-size: 6rem;
+  }
+  #frontpage_type button {
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 750px) {
+  #configurator_main {
+    display: flex;
+  }
+
+  /* Product view 750px */
+  #product_view {
+    order: 2;
+    margin-top: 100px;
+    width: 66vw;
+  }
+
+  /* Options 750px */
+
+  #options {
+    order: 1;
+    margin-top: 100px;
+  }
+
+  #select_saddle div,
+  #select_wheels div,
+  #select_addons div,
+  #select_grips div {
+    width: 60px;
+    height: 60px;
+  }
+
+  .color {
+    width: 25px;
+    height: 25px;
+    margin: 20px 5px 30px 0;
+  }
+
+  #select_saddle div,
+  #select_wheels div,
+  #select_addons div,
+  #select_grips div {
+    margin: 20px 10px 30px 0;
+  }
+
+  #frame_color,
+  #metal_color,
+  #select_saddle,
+  #select_wheels,
+  #select_grips {
+    display: flex;
+    margin-bottom: 25px;
+    background-size: 30% 2px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16));
+    background-repeat: no-repeat;
+    background-position: 0% 100%;
+  }
+
+  /* Selected features 750px */
+
+  #selected_features {
+    order: 3;
+    max-width: 200px;
+    box-shadow: none;
+    background-size: 2px 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.16), rgba(0, 0, 0, 0.16));
+    background-repeat: no-repeat;
+    background-position: 0% 50%;
+    align-self: center;
+    padding: 20px;
+  }
+
+  #selected_gear ul li,
+  #selected_addons ul li {
+    width: 60px;
+    height: 60px;
+  }
+
+  #selected_gear ul,
+  #selected_addons ul {
+    flex-wrap: wrap;
+  }
+
+  /* Mouse over message 750px */
+
+  .hover_text {
+    width: 110px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    margin: 35px -43px;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .hover_text p,
+  .hover_text_gear p {
+    opacity: 1;
+  }
+
+  .hover_text_gear {
+    width: 110px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    margin: 70px -25px;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+
+  .color:hover .hover_text,
+  #select_saddle div:hover .hover_text_gear,
+  #select_wheels div:hover .hover_text_gear,
+  #select_grips div:hover .hover_text_gear,
+  #select_addons div:hover .hover_text_gear {
+    opacity: 1;
+  }
+
+  .hover_text::after,
+  .hover_text_gear::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+  }
+}
+
 @media screen and (min-width: 1000px) {
+  /* nav */
+  .scroll_link {
+    left: 40%;
+  }
+
+  .config_link {
+    left: 60%;
+  }
+
+  /* scroll */
   .scroll_container {
     flex-direction: row;
     margin-right: 50px;
@@ -237,27 +796,34 @@ body > main > section:nth-child(1) > div.bike_img > img.scroll_bike_frame.\.scro
   }
 }
 
-/* Frontpage */
+/***************** Animations ********************/
 
-#frontpage_type {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
+.animate-feature-in {
+  --diffY: 0;
+  --diffX: 0;
+  animation: feature-in 1s;
 }
 
-#frontpage_type h1 {
-  font-size: 4rem;
-  padding-bottom: 15px;
+@keyframes feature-in {
+  0% {
+    transform: translate(calc(var(--diffX) * 1px), calc(var(--diffY) * 1px));
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
-#frontpage_type p {
-  font-size: 1.2rem;
-  font-weight: 200;
-  font-style: italic;
-  padding-bottom: 30px;
+.animate-feature-out {
+  --diffY: 0;
+  --diffX: 0;
+  animation: feature-out 1s;
 }
 
-/* animation  */
+@keyframes feature-out {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(calc(var(--diffX) * 1px), calc(var(--diffY) * 1px));
+  }
+}
