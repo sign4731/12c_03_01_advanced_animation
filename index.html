@@ -37,8 +37,8 @@
       window.addEventListener("DOMContentLoaded", runAnimationOnWheels);
 
       function runAnimationOnWheels() {
-        gsap.to("#frontpage_wheel1 div", { duration: 1, x: 0 });
-        gsap.to("#frontpage_wheel2 div", { duration: 1.5, y: -0 });
+        gsap.to("#frontpage_wheel1 div", { duration: 1, x: 0, opacity: 0.4 });
+        gsap.to("#frontpage_wheel2 div", { duration: 1.5, y: -0, opacity: 0.4 });
         gsap.to("#frontpage_type h1", { duration: 3, delay: 0.5, opacity: 1 });
         gsap.to("#frontpage_type p", { duration: 3, delay: 1, opacity: 1 });
       }
