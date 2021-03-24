@@ -215,12 +215,16 @@ html {
   position: absolute;
 }
 
+.scroll_bike_grip1 {
+  margin-top: 10.9vh;
+}
+
 .scroll_container .text_wrapper {
   text-align: center;
 }
 
 body > main > section:nth-child(1) > div.bike_img > img.scroll_bike_frame.\.scroll_bike_frame1 {
-  z-index: 1;
+  z-index: 100;
 }
 
 #last_scrollpage > h2 {
@@ -278,7 +282,7 @@ body > main > section:nth-child(1) > div.bike_img > img.scroll_bike_frame.\.scro
 }
 
 .scroll_bike_darkmode {
-  z-index: 1000;
+  z-index: 101;
   opacity: 60%;
 }
 
@@ -321,6 +325,34 @@ body > main > section:nth-child(1) > div.bike_img > img.scroll_bike_frame.\.scro
   text-shadow: 1px 3px 5px #00000025;
   margin-bottom: 30px;
 }
+
+/* scrollbar */
+#scrollbar-box {
+  height: 400px;
+  width: 5px;
+  border-radius: 25px;
+  background-color: #dbdbdb;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.16);
+  position: fixed;
+  right: 10px;
+  top: 50%;
+  margin-top: -200px;
+  z-index: 1000;
+}
+
+#scrollbar-bar {
+  height: 50px;
+  width: 5px;
+  border-radius: 25px;
+  background-color: #59e3bd;
+  position: fixed;
+  right: 10px;
+  top: 50%;
+  margin-top: -200px;
+  z-index: 1000;
+  transform-origin: top;
+}
+
 /************************ Configurator *************************/
 
 /* Product view */
@@ -607,6 +639,18 @@ body > main > section:nth-child(1) > div.bike_img > img.scroll_bike_frame.\.scro
   #frontpage_type button {
     margin-right: 20px;
   }
+
+  #scrollbar-box {
+    width: 7px;
+    border-radius: 25px;
+    right: 20px;
+  }
+
+  #scrollbar-bar {
+    width: 7px;
+    border-radius: 25px;
+    right: 20px;
+  }
 }
 
 @media (min-width: 750px) {
@@ -769,6 +813,10 @@ body > main > section:nth-child(1) > div.bike_img > img.scroll_bike_frame.\.scro
     align-self: center;
     margin-left: 100px;
     margin-bottom: 0;
+  }
+
+  .scroll_bike_grip1 {
+    margin-top: 0;
   }
 
   .text_wrapper {
