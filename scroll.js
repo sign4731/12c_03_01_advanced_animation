@@ -22,10 +22,11 @@ function startWindowLoadedAnimation() {
   if (!elementToAnimate.classList.contains("animation_done")) {
     elementToAnimate.animate(fadingTextAnimation, fadingTextProperties);
   }
-  setupScrollAnimations();
+  setupScrollAnimationsBike();
+  setupScrollAnimationsText();
 }
 
-function setupScrollAnimations() {
+function setupScrollAnimationsBike() {
   const tlOne = gsap.timeline({
     scrollTrigger: {
       trigger: ".scroll_container_frame",
