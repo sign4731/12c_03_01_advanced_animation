@@ -36,6 +36,7 @@ function frameColorSelection() {
   document.querySelectorAll("#frame_color div").forEach((button) =>
     button.addEventListener("click", () => {
       stel_farve.style.fill = button.dataset.color;
+      button.classList.add("chosen");
     })
   );
 }
@@ -44,6 +45,7 @@ function metalColorSelection() {
   document.querySelectorAll("#metal_color div").forEach((button) =>
     button.addEventListener("click", () => {
       metal_farve.style.fill = button.dataset.color;
+      button.classList.add("chosen");
     })
   );
 }
