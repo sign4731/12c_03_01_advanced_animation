@@ -19,9 +19,8 @@ document.addEventListener("DOMContentLoaded", startWindowLoadedAnimation);
 
 function startWindowLoadedAnimation() {
   const elementToAnimate = document.querySelector(".text_wrapper_1");
-  if (!elementToAnimate.classList.contains("animation_done")) {
-    elementToAnimate.animate(fadingTextAnimation, fadingTextProperties);
-  }
+  elementToAnimate.animate(fadingTextAnimation, fadingTextProperties);
+
   setupScrollAnimationsBike();
   setupScrollAnimationsText();
   setupScrollBarAnimation();
@@ -41,7 +40,6 @@ function setupScrollAnimationsText() {
       end: "bottom 0%",
     },
     onStart: () => {
-      console.log("virker");
       const elementToAnimate = document.querySelector(".text_wrapper_2");
       if (!elementToAnimate.classList.contains("animation_done")) {
         elementToAnimate.animate(fadingTextAnimation, fadingTextProperties);
@@ -60,7 +58,6 @@ function setupScrollAnimationsText() {
       end: "bottom 0%",
     },
     onStart: () => {
-      console.log("virker");
       const elementToAnimate = document.querySelector(".text_wrapper_3");
       if (!elementToAnimate.classList.contains("animation_done")) {
         elementToAnimate.animate(fadingTextAnimation, fadingTextProperties);
@@ -79,7 +76,6 @@ function setupScrollAnimationsText() {
       end: "bottom 0%",
     },
     onStart: () => {
-      console.log("virker");
       const elementToAnimate = document.querySelector(".text_wrapper_4");
       if (!elementToAnimate.classList.contains("animation_done")) {
         elementToAnimate.animate(fadingTextAnimation, fadingTextProperties);
@@ -98,7 +94,6 @@ function setupScrollAnimationsText() {
       end: "top 40%",
     },
     onStart: () => {
-      console.log("virker");
       const elementToAnimate = document.querySelector(".text_wrapper_5");
       if (!elementToAnimate.classList.contains("animation_done")) {
         elementToAnimate.animate(fadingTextAnimation, fadingTextProperties);
@@ -117,7 +112,6 @@ function setupScrollAnimationsText() {
       end: "top 40%",
     },
     onStart: () => {
-      console.log("virker");
       const elementToAnimate = document.querySelector("#last_scrollpage > h2");
       if (!elementToAnimate.classList.contains("animation_done")) {
         elementToAnimate.animate(fadingTextAnimation, fadingTextProperties);
@@ -129,7 +123,7 @@ function setupScrollAnimationsText() {
 }
 
 function setupScrollAnimationsBike() {
-  const tlOne = gsap.timeline({
+  const tlsBikeAnimationOne = gsap.timeline({
     scrollTrigger: {
       trigger: ".scroll_container_frame",
       scrub: true,
@@ -139,9 +133,9 @@ function setupScrollAnimationsBike() {
     },
   });
 
-  tlOne.to(".scroll_bike_frame", { y: "100vh" });
+  tlsBikeAnimationOne.to(".scroll_bike_frame", { y: "100vh" });
 
-  const tlTwo = gsap.timeline({
+  const tlsBikeAnimationTwo = gsap.timeline({
     scrollTrigger: {
       trigger: ".scroll_container_wheels",
       scrub: true,
@@ -151,10 +145,10 @@ function setupScrollAnimationsBike() {
     },
   });
 
-  tlTwo.to(".scroll_bike_frame", { y: "200vh" });
-  tlTwo.to(".scroll_bike_wheels1", { y: "100vh" }, 0);
+  tlsBikeAnimationTwo.to(".scroll_bike_frame", { y: "200vh" });
+  tlsBikeAnimationTwo.to(".scroll_bike_wheels1", { y: "100vh" }, 0);
 
-  const tlThree = gsap.timeline({
+  const tlsBikeAnimationThree = gsap.timeline({
     scrollTrigger: {
       trigger: ".scroll_container_saddle",
       scrub: true,
@@ -164,11 +158,11 @@ function setupScrollAnimationsBike() {
     },
   });
 
-  tlThree.to(".scroll_bike_frame", { y: "300vh" }, 0);
-  tlThree.to(".scroll_bike_wheels1", { y: "200vh" }, 0);
-  tlThree.to(".scroll_bike_saddle", { y: "100vh" }, 0);
+  tlsBikeAnimationThree.to(".scroll_bike_frame", { y: "300vh" }, 0);
+  tlsBikeAnimationThree.to(".scroll_bike_wheels1", { y: "200vh" }, 0);
+  tlsBikeAnimationThree.to(".scroll_bike_saddle", { y: "100vh" }, 0);
 
-  const tlFour = gsap.timeline({
+  const tlsBikeAnimationFour = gsap.timeline({
     scrollTrigger: {
       trigger: ".scroll_container_grip",
       scrub: true,
@@ -178,12 +172,12 @@ function setupScrollAnimationsBike() {
     },
   });
 
-  tlFour.to(".scroll_bike_frame", { y: "400vh" }, 0);
-  tlFour.to(".scroll_bike_wheels1", { y: "300vh" }, 0);
-  tlFour.to(".scroll_bike_saddle", { y: "200vh" }, 0);
-  tlFour.to("#dark_overlay", { opacity: 1 }, 0);
+  tlsBikeAnimationFour.to(".scroll_bike_frame", { y: "400vh" }, 0);
+  tlsBikeAnimationFour.to(".scroll_bike_wheels1", { y: "300vh" }, 0);
+  tlsBikeAnimationFour.to(".scroll_bike_saddle", { y: "200vh" }, 0);
+  tlsBikeAnimationFour.to("#dark_overlay", { opacity: 1 }, 0);
 
-  const tlFive = gsap.timeline({
+  const tlsBikeAnimationFive = gsap.timeline({
     scrollTrigger: {
       trigger: ".scroll_container_grip",
       scrub: true,
@@ -193,9 +187,9 @@ function setupScrollAnimationsBike() {
     },
   });
 
-  tlFive.to(".scroll_bike_grip1", { y: "100vh" });
+  tlsBikeAnimationFive.to(".scroll_bike_grip1", { y: "100vh" });
 
-  const tlSix = gsap.timeline({
+  const tlsBikeAnimationSix = gsap.timeline({
     scrollTrigger: {
       trigger: "#last_scrollpage",
       scrub: true,
@@ -205,5 +199,5 @@ function setupScrollAnimationsBike() {
     },
   });
 
-  tlSix.to("#dark_overlay", { opacity: 0 });
+  tlsBikeAnimationSix.to("#dark_overlay", { opacity: 0 });
 }
