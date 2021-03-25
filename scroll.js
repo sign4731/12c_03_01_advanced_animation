@@ -45,6 +45,7 @@ function setupScrollAnimationsText() {
       const elementToAnimate = document.querySelector(".text_wrapper_2");
       if (!elementToAnimate.classList.contains("animation_done")) {
         elementToAnimate.animate(fadingTextAnimation, fadingTextProperties);
+        document.querySelector(".text_wrapper_2").classList.add("animation_done");
       }
     },
   });
@@ -63,6 +64,7 @@ function setupScrollAnimationsText() {
       const elementToAnimate = document.querySelector(".text_wrapper_3");
       if (!elementToAnimate.classList.contains("animation_done")) {
         elementToAnimate.animate(fadingTextAnimation, fadingTextProperties);
+        document.querySelector(".text_wrapper_3").classList.add("animation_done");
       }
     },
   });
@@ -81,6 +83,7 @@ function setupScrollAnimationsText() {
       const elementToAnimate = document.querySelector(".text_wrapper_4");
       if (!elementToAnimate.classList.contains("animation_done")) {
         elementToAnimate.animate(fadingTextAnimation, fadingTextProperties);
+        document.querySelector(".text_wrapper_4").classList.add("animation_done");
       }
     },
   });
@@ -99,6 +102,7 @@ function setupScrollAnimationsText() {
       const elementToAnimate = document.querySelector(".text_wrapper_5");
       if (!elementToAnimate.classList.contains("animation_done")) {
         elementToAnimate.animate(fadingTextAnimation, fadingTextProperties);
+        document.querySelector(".text_wrapper_5").classList.add("animation_done");
       }
     },
   });
@@ -117,8 +121,8 @@ function setupScrollAnimationsText() {
       const elementToAnimate = document.querySelector("#last_scrollpage > h2");
       if (!elementToAnimate.classList.contains("animation_done")) {
         elementToAnimate.animate(fadingTextAnimation, fadingTextProperties);
+        document.querySelector("#last_scrollpage > h2").classList.add("animation_done");
       }
-      cancelFadeAnimation();
     },
   });
   tlsTextAnimationFive.to(".text_wrapper", { y: "0" });
@@ -202,13 +206,4 @@ function setupScrollAnimationsBike() {
   });
 
   tlSix.to("#dark_overlay", { opacity: 0 });
-}
-
-function cancelFadeAnimation() {
-  console.log("cancelFadeAnimation");
-  document.querySelector(".text_wrapper_2").classList.add("animation_done");
-  document.querySelector(".text_wrapper_3").classList.add("animation_done");
-  document.querySelector(".text_wrapper_4").classList.add("animation_done");
-  document.querySelector(".text_wrapper_5").classList.add("animation_done");
-  document.querySelector("#last_scrollpage > h2").classList.add("animation_done");
 }
