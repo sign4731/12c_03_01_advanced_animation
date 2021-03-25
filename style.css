@@ -90,6 +90,11 @@ nav {
   left: 75%;
 }
 
+.underline {
+  border-bottom: 2px solid #59e3bd;
+  box-shadow: 0px 5px 7px -6px #59e3bd;
+}
+
 /*************************************** Frontpage */
 
 #frontpage_type {
