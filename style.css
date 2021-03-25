@@ -549,6 +549,22 @@ body > main > section:nth-child(1) > div.bike_img > img.scroll_bike_frame.\.scro
   opacity: 0;
 }
 
+/********************************************** Footer */
+
+footer {
+  width: 100vw;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+footer p {
+  color: gray;
+  font-size: 0.8rem;
+  font-weight: 100;
+  margin: 5px;
+}
+
 /********************************************* Media queries */
 @media screen and (min-width: 500px) {
   .scroll_container img {
