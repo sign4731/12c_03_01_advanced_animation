@@ -36,6 +36,7 @@ function frameColorSelection() {
   document.querySelectorAll("#frame_color div").forEach((button) =>
     button.addEventListener("click", () => {
       stel_farve.style.fill = button.dataset.color;
+      removeChosenClassFromFrame();
       button.classList.add("chosen");
     })
   );
@@ -45,9 +46,17 @@ function metalColorSelection() {
   document.querySelectorAll("#metal_color div").forEach((button) =>
     button.addEventListener("click", () => {
       metal_farve.style.fill = button.dataset.color;
+      removeChosenClassFromMetal();
       button.classList.add("chosen");
     })
   );
+}
+
+function removeChosenClassFromMetal() {
+  document.querySelectorAll("#metal_color div").forEach((button) => button.classList.remove("chosen"));
+}
+function removeChosenClassFromFrame() {
+  document.querySelectorAll("#frame_color div").forEach((button) => button.classList.remove("chosen"));
 }
 
 function displayAddOns(event) {
@@ -116,6 +125,7 @@ function displayFeatures(event) {
     } else if (addOns.computer) {
       removeComputer();
     }
+
     // forbiddenFeature.sport_grip = false;
     // console.log("sport grips is false");
 

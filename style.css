@@ -348,7 +348,7 @@ body > main > section:nth-child(1) > div.bike_img > img.scroll_bike_frame.\.scro
 
 #product_view {
   width: 100vw;
-  height: 60vh;
+  height: 40vh;
   position: relative;
 }
 
@@ -494,7 +494,7 @@ body > main > section:nth-child(1) > div.bike_img > img.scroll_bike_frame.\.scro
 }
 
 .chosen {
-  border: 1px solid #59e3bd;
+  border: 2px solid #59e3bd;
 }
 /* Selected features */
 
@@ -521,6 +521,7 @@ body > main > section:nth-child(1) > div.bike_img > img.scroll_bike_frame.\.scro
 
 #selected_gear ul li,
 #selected_addons ul li {
+  border: 2px solid #59e3bd;
   border-radius: 50%;
   width: 80px;
   height: 80px;
@@ -634,6 +635,10 @@ body > main > section:nth-child(1) > div.bike_img > img.scroll_bike_frame.\.scro
     width: 7px;
     border-radius: 25px;
     right: 20px;
+  }
+
+  #product_view {
+    height: 60vh;
   }
 }
 
